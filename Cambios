@@ -1,0 +1,20 @@
+29-08
+
+        UML CHANGES
+        * Enemigo deja de ser una clase abstracta para ser concreta; los métodos llamaran y crearan distintos enemigos variando los atributos. Si se les ocurre algún criterio por el cual deba volver a ser abstracta para que sea la clase padre de distintos enemigos sientanse libres de ponerlo. 
+
+        * Las inteligencias se me ocurrieron:
+            * Bomba: el enemigo se descompone, empieza a caer y explota con un radio de explosión que debe ser esquivado
+            * Bobo: el enemigo empieza a moverse torpemente cuando tiene menos del 30% de vida, y dispara para cualquier lado. (?)
+            * Kamikaze: se tira contra el jugador hasta colisionar. Si pasa la pantalla vuelve a su lugar. 
+        * En arma, las clases hijas son:
+            * Debil: le saca un 15 % al enemigo (desde la perspectica que esté, o sea, si el que tiene el arma es el enemigo, el "enemigo" de el es nuestro jugador)
+            * Intermedia: le saca un 50 %
+            * PoderTotal: te mata con un disparo. El tema de esta arma es que se me ocurrio que para no tener tanta ventaja solo dure una x cantidad de tiempo (no sé luego veremos cuanto tiempo) y sólo la puede tener nuestro juador. 
+
+        * En obstáculos: agregué agujero negro, éste cuando cae por la pantalla se lleva todo lo que esté a su paso, sea enemigo, sea jugador, sea tiro. (já, despues veremos como se implementa, debe ser como un REMOVE EVERYTHING jajaja)
+
+        *Movi el diagrama un poco porque me estaba quedando medio corto el espacio.
+
+         
+
