@@ -4,7 +4,7 @@ import javax.swing.ImageIcon;
 
 /**
  * 
- * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Maria Sol Stiep, Yasmín Pie Lopez
  *
  */
 public abstract class Personaje extends Entidad{
@@ -13,7 +13,7 @@ public abstract class Personaje extends Entidad{
 	protected Arma arma;
 	
 	public Personaje(ImageIcon i) {
-		sprite = new ImageIcon();
+		sprite = i;
 	}
 	
 	public void setPuntosVida(int p) {
@@ -39,4 +39,10 @@ public abstract class Personaje extends Entidad{
 	public int getY() {
 		return y;
 	}
+	
+	public abstract void agregarArma();
+	
+	public abstract void modificarAlcanceArma(int a);
+	
+	public abstract void modificarPuntosGolpeArma(int p);
 }

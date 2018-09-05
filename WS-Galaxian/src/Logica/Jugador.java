@@ -4,7 +4,7 @@ import javax.swing.ImageIcon;
 
 /**
  * 
- * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Maria Sol Stiep, Yasmín Pie Lopez
  *
  */
 public class Jugador extends Personaje {
@@ -13,6 +13,18 @@ public class Jugador extends Personaje {
 		super(i);
 		x=400;
 		y=600;   // ubicaciones en el mapa, suponiendo que el tama�o total es 800x600
+	}
+
+	public void agregarArma() {
+		arma=new Intermedia();
+	}
+
+	public void modificarAlcanceArma(int a) {
+		arma.setAlcance(a);
+	}
+
+	public void modificarPuntosGolpeArma(int p) {
+		arma.setPuntosGolpe(p);
 	}
 	
 }

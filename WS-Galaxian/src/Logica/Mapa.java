@@ -21,15 +21,29 @@ public abstract class Mapa {
 		imagenJugador=jug;
 		imagenEnemigo=en;
 		fondoEspacial=f;
-		// hay que agregar las imagenes del fondo, jugador y enemigo
+		// hay que agregar la imagen de fondo
+			
+		// Creo jugador y enemigos. 
+		crearJugador();
+		crearEnemigos();
+		
+	}
+	
+	
+	public void crearJugador() {
+		jugador =new Jugador(imagenJugador);
+		jugador.agregarArma();
+		jugador.modificarPuntosGolpeArma(15);
 		// agregar al mapa al jugador con jugador.getX()  y   jugador.getY()
+	}
+	
+	public void crearEnemigos() {
 		Enemigo e;
 		int i,j;
-		// Creo jugador y lista de enemigos. 
-		jugador =new Jugador(imagenJugador);
 		enemigos=new LinkedList<Personaje>();			
 		// creo los enemigos y los voy agregando al mapa y a la lista
 		// hay que partir el for dependiendo de la cantidad de enemigos con distintas inteligencias
+		
 		// enemigos kamikaze
 		for (i=0;i<3;i++) {
 			e=new Enemigo(imagenEnemigo, i,i*funcionEnemigos);
@@ -37,13 +51,16 @@ public abstract class Mapa {
 			// agregarle la inteligencia que le corresponde a e
 			// falta agregar al mapa con e.getX()   y   e.getY()
 		}
+		
 		// enemigos con armas
 		for(j=i;j<2;j++) {
 			e=new Enemigo(imagenEnemigo, j,j*funcionEnemigos);
 			enemigos.add(e);
+			e.agregarArma();
 			// agregarle la inteligencia que le corresponde a e
 			// falta agregar al mapa con e.getX()   y   e.getY()
 		}
+		
 		// completar si es que faltan enemigos 
 		for(int z=j;z<cantidadEnemigos;z++) {
 			e=new Enemigo(imagenEnemigo, z,z*funcionEnemigos);
@@ -51,7 +68,5 @@ public abstract class Mapa {
 			// agregarle la inteligencia que le corresponde a e
 			// falta agregar al mapa con e.getX()   y   e.getY()
 		}
-			
-		
 	}
 }
