@@ -25,7 +25,7 @@ public abstract class Mapa {
 
  public Mapa(GUI gui,int filas) {
 	 
-		grafico = new JLabel(new ImageIcon(this.getClass().getResource("img/Fondo_nivel_1.png")));
+		grafico = new JLabel(new ImageIcon(this.getClass().getResource("/img/Fondo_nivel_1.png")));
 		grafico.setBounds(0, 0, w, h);
 	 
 	 	this.filas=filas;
@@ -36,38 +36,38 @@ public abstract class Mapa {
 		int posicionVertical ;
         int posicionHorizontal;
         Enemigo e;
-        for (int i = 0; i < filas; ++i) {
-
-        	posicionHorizontal=(gui.getWidth()-330)/2;
-            posicionVertical = posicionVertical+distVertical;
-
-            for (int j = 0; j < ENEMIGOSXFILA; j++) {
-            	Random r=new Random();
-            	int n= r.nextInt(5);
-            	
-            	if((j%5)==0 ) 
-            		e=new Bobo(2,posicionHorizontal,posicionVertical,100);
-            	else {
-            		if((j%5)==1 ) 
-            			e=new Kamikaze(4,posicionHorizontal,posicionVertical,100);
-            		else {
-            			if((j%5)==2 ) 
-            				e=new Bomba(4,posicionHorizontal,posicionVertical,100);
-            			else {
-            				if((j%5)==3 ) 
-            					e=new Cambiante(3,posicionHorizontal,posicionVertical,100);
-            				else {
-            					if((j%5)==4 ) 
-            						e=new Perdedor(3,posicionHorizontal,posicionVertical,100);
-            				}
-            			}
-            		}
-            	}
-                enemigos.add(e);
-                gui.add(e.getGrafico());
-                posicionHorizontal += distHorizontal;
-            }
-        }
+//        for (int i = 0; i < filas; ++i) {
+//
+//        	posicionHorizontal=(gui.getWidth()-330)/2;
+//            posicionVertical = posicionVertical+distVertical;
+//
+//            for (int j = 0; j < ENEMIGOSXFILA; j++) {
+//            	Random r=new Random();
+//            	int n= r.nextInt(5);
+//            	
+//            	if((j%5)==0 ) 
+//            		e=new Bobo(2,posicionHorizontal,posicionVertical,100);
+//            	else {
+//            		if((j%5)==1 ) 
+//            			e=new Kamikaze(4,posicionHorizontal,posicionVertical,100);
+//            		else {
+//            			if((j%5)==2 ) 
+//            				e=new Bomba(4,posicionHorizontal,posicionVertical,100);
+//            			else {
+//            				if((j%5)==3 ) 
+//            					e=new Cambiante(3,posicionHorizontal,posicionVertical,100);
+//            				else {
+//            					if((j%5)==4 ) 
+//            						e=new Perdedor(3,posicionHorizontal,posicionVertical,100);
+//            				}
+//            			}
+//            		}
+//            	}
+//                enemigos.add(e);
+//                gui.add(e.getGrafico());
+//                posicionHorizontal += distHorizontal;
+//            }
+//        }
     }
 
 	

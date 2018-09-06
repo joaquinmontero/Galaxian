@@ -1,4 +1,7 @@
 package Logica;
+
+import javax.swing.ImageIcon;
+
 /**
  * 
  * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez

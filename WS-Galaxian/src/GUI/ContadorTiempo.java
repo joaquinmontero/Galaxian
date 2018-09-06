@@ -20,7 +20,7 @@ public class ContadorTiempo extends Thread {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			elJuego.mover();
+//			elJuego.mover();
 		}
 	}
 }
