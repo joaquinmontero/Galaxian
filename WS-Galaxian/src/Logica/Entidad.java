@@ -14,8 +14,8 @@ public abstract class Entidad {
 	
 	protected JLabel grafico;
 	protected Icon image[];
-	protected final int width = 32;
-	protected final int height = 32;
+	protected final int width = 110;
+	protected final int height = 55;
 	
 	protected int velocidad;
 	protected int vida;

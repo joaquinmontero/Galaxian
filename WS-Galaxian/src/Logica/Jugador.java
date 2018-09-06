@@ -10,7 +10,7 @@ public class Jugador extends Personaje {
 	public Jugador(int velocidad,int x, int y,int vida) {
 
         super(velocidad,x,y,vida);
-        this.image[0] = new ImageIcon(this.getClass().getResource(".png"));
+        this.image[0] = new ImageIcon(this.getClass().getResource("img/Jugador_normal.png"));
         arma=new ArmaJugador();
 	}
 	

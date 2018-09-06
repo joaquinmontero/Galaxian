@@ -1,5 +1,6 @@
 package Logica;
 import java.util.*;
+import GUI.*;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -16,7 +17,7 @@ public abstract class Mapa {
     protected final int w=330;
     protected final int h=330;
 	protected Jugador jugador;
-	protected LinkedList<Enemigo> enemigos;   
+	protected Collection<Enemigo> enemigos;   
     protected int filas;
     protected JLabel grafico;
     
@@ -24,12 +25,12 @@ public abstract class Mapa {
 
  public Mapa(GUI gui,int filas) {
 	 
-		grafico = new JLabel(new ImageIcon(this.getClass().getResource(".png")));
+		grafico = new JLabel(new ImageIcon(this.getClass().getResource("img/Fondo_nivel_1.png")));
 		grafico.setBounds(0, 0, w, h);
 	 
 	 	this.filas=filas;
 	 	
-	 	jugador = new Jugador(10, gui.getHigh()+32, (gui.getWidth()/2)+32, 100);
+	 	jugador = new Jugador(10, gui.getHeight()+32, (gui.getWidth()/2)+32, 100);
 		gui.add(jugador.getGrafico());
        
 		int posicionVertical ;
