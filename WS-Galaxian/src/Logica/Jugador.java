@@ -27,8 +27,8 @@ public class Jugador extends Personaje {
 		arma.setAlcance(a);
 	}
 
-	public void modificarPuntosGolpeArma(int p) {
-		arma.setPuntosGolpe(p);
+	public void modificarImpactoArma(int p) {
+		arma.setImpacto(p);
 	}
 	
 }
