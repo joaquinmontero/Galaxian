@@ -1,31 +1,32 @@
 package Logica;
-
-import javax.swing.ImageIcon;
-
 /**
  * 
- * @author Araceli Iglesias, Maria Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
  *
  */
-public class Enemigo extends Personaje {
-	private Inteligencia inteligencia;
+public abstract class Enemigo extends Personaje {
+	Inteligencia i;
+	boolean regala;
+	Premio premio;
 	
-	public Enemigo(ImageIcon i,int ejeX,int ejeY) {
-		super(i);
-		x=ejeX;
-		y=ejeY;
-	}
-
-	public void agregarArma() {
-		arma=new Intermedia();
-	}
-
-	public void modificarAlcanceArma(int a) {
-		arma.setAlcance(a);
-	}
-
-	public void modificarPuntosGolpeArma(int p) {
-		arma.setPuntosGolpe(p);
+	protected Enemigo(int velocidad,int x, int y, int v) {
+		super(velocidad,x,y,v);
+		regala=false;
 	}
 	
+	public void asignarInteligencia(Inteligencia i) {
+		this.i=i;
+	}
+	
+	public void entregaPremio(boolean b) {
+		premio=b;
+	}
+	public Premio premio() {
+		return premio;
+	}
+	
+	public void asignarPremio(Premio p) {
+		premio=p;
+	}
+
 }

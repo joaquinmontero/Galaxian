@@ -1,24 +1,28 @@
 package Logica;
-
-import javax.swing.ImageIcon;
-
 /**
  * 
- * @author Araceli Iglesias, Maria Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
  *
  */
 public class Jugador extends Personaje {
+	Arma arma;
 	
-	public Jugador(ImageIcon i) {
-		super(i);
-		x=400;
-		y=600;   // ubicaciones en el mapa, suponiendo que el tama�o total es 800x600
-	}
+	public Jugador(int velocidad,int x, int y,int vida) {
 
-	public void agregarArma() {
-		arma=new Intermedia();
+        super(velocidad,x,y,vida);
+        this.image[0] = new ImageIcon(this.getClass().getResource(".png"));
+        arma=new ArmaJugador();
 	}
-
+	
+	public void disparar(Entidad e) {
+		Disparo d=arma.crearDisparo();
+		e.meDisparan(d);
+	}
+	
+	public void asignarArma(Arma a) {
+		arma=a;
+	}
+	
 	public void modificarAlcanceArma(int a) {
 		arma.setAlcance(a);
 	}
