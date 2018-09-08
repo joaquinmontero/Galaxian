@@ -1,22 +1,39 @@
 package Logica;
+import Mapa.*;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 import GUI.*;
 /**
- * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
  *
  */
 public class Juego {
-	private Nivel_1 lvl1;
-	private Nivel_2 lvl2;
-	private Nivel_3 lvl3;
-	private Jugador jugador;
+	private Mapa mapa;
 	public Juego(GUI gui) {
-		lvl1 = new Nivel_1(gui);	
+		mapa = new Nivel_3(gui);
+		
 	}
 	
+	/**
+	 * Se encarga de mover de manera random a los enemigos, nunca los mueve hacia arriba
+	 */
+	public void mover(){
+		int i=0;
+			
+			while(i<mapa.enemigos().size()) {
+			Random r = new Random();
+			
+			int dir = r.nextInt(3)+1;
+			
+			mapa.enemigos().get(i).mover(dir);
+			i++;
+		}
+	}
 	
-	
+	/**
+	 * Mueve al jugador en base a la direccion pasada por parametro
+	 * @param dir Direccion del movimiento
+	 */
 	public void mover(int dir){		
 		int direccion = 0;
 		
@@ -35,6 +52,9 @@ public class Juego {
 				break;
 		}
 		
-		jugador.mover(direccion);
+		mapa.jugador().mover(direccion);
 	}
+
 }
+
+	

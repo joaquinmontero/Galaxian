@@ -1,6 +1,6 @@
 package GUI;
 /**
- * @author Araceli Iglesias, Sol Stiep, Yasmín Pie Lopez
+ * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
  */
 
 import Logica.*;
@@ -20,7 +20,7 @@ public class ContadorTiempo extends Thread {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-//			elJuego.mover();
+		elJuego.mover();
 		}
 	}
 }

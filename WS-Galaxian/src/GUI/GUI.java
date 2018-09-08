@@ -7,13 +7,33 @@ import Logica.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class GUI extends JFrame{
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import Logica.Juego;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+/**
+ * 
+ * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
+ *
+ */
+
+
+public class GUI extends JFrame {
+	private static final long serialVersionUID = 1L;
+
 	private JPanel contentPane;
-	private ContadorTiempo tiempo;
+	
 	private Juego j;
+	private ContadorTiempo tiempo;
 
 	/**
-	 * Inicia la aplicacion
+	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -29,7 +49,7 @@ public class GUI extends JFrame{
 	}
 
 	/**
-	 * Crea el frame
+	 * Create the frame.
 	 */
 	public GUI() {
 		addKeyListener(new KeyAdapter() {
@@ -41,9 +61,9 @@ public class GUI extends JFrame{
 		getContentPane().setLayout(null);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
+		setBounds(0, 0, 1200, 1000);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -57,5 +77,4 @@ public class GUI extends JFrame{
 		
 		this.repaint();
 	}
-	
 }

@@ -1,10 +1,23 @@
-package Logica;
+package Mapa;
+import Obstaculo.*;
+import Premio.*;
+import GUI.*;
+/**
+ * 
+ * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
+ *
+ */
+/**
+ * Inicializa el mapa con su respectiva cantidad de filas de enemigos y con obstaculo
+ * @param GUI donde ubicara al jugador, enemigos y obstaculos
+ */
 
 public class Nivel_3 extends Mapa{
 	
 	public Nivel_3(GUI gui) {
 		super(gui,3);
 		
+		/**
 		Obstaculo o=new Destruible();
 		o=new Destruible(0,(gui.getWidth()/4)*2,99,100);
 		gui.add(o.getGrafico());
@@ -37,7 +50,8 @@ public class Nivel_3 extends Mapa{
 		e.entregaPremio(true);
 		p= new SuperArma();
 		e.asignarPremio(p);
+		*/
 	}
 }
 
-}
+
