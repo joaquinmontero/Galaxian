@@ -107,7 +107,7 @@ public abstract class Entidad {
 	
 	
 	/**
-	 * La entidad el informa al disparo recibido quién está recibiendo ese disparo
+	 * La entidad el informa al disparo recibido quiï¿½n estï¿½ recibiendo ese disparo
 	 * @param d Disparo a activar
 	 */
 	public void meDisparan(Disparo d) {

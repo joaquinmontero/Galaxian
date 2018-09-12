@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 
 /**
  * Inicializa jugador con su respectiva velocidad, posicion X, posicion Y y puntos de vida
- * Añade el conjunto de imagenes al arreglo de imagenes del jugador
+ * Aï¿½ade el conjunto de imagenes al arreglo de imagenes del jugador
  * @param v Int velocidad, x Int posicion en eje X, y Int posicion en eje Y, v Int puntos de vida
  */
 public class Jugador extends Entidad {
@@ -19,10 +19,10 @@ public class Jugador extends Entidad {
 	public Jugador(int velocidad,int x, int y,int vida) {
 
         super(velocidad,x,y,vida);
-        this.image[0] = new ImageIcon(this.getClass().getResource("/sprites/Princesa_normal.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/sprites/Princesa_dispara.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/sprites/Princesa_izquierda.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/sprites/Princesa_derecha.png"));
+        this.image[0] = new ImageIcon(this.getClass().getResource("/img/Jugador_arriba.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Jugador_abajo.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Jugador_izquierda.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Jugador_derecha.png"));
         
 	}
 	
@@ -44,9 +44,10 @@ public class Jugador extends Entidad {
 	//y para que solo pueda moverse hacia los costados
 		switch (dir) {
 			case 0 : //Arriba
-				cambiarGrafico(1);
+				cambiarGrafico(0);
 				break;
 			case 1 : //Abajo
+				cambiarGrafico(1);
 				break;
 			case 2 : //Izquierda
 				pos.setLocation(pos.x - velocidad, pos.y);

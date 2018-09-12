@@ -9,16 +9,16 @@ import javax.swing.ImageIcon;
 
 /**
  * Inicializa Kamikaze con su respectiva velocidad, posicion X, posicion Y y puntos de vida
- * Añade el conjunto de imagenes al arreglo de imagenes de Kamikaze
+ * Aï¿½ade el conjunto de imagenes al arreglo de imagenes de Kamikaze
  * @param v Int velocidad, x Int posicion en eje X, y Int posicion en eje Y, v Int puntos de vida
  */
 public class Kamikaze extends Enemigo{
 	public Kamikaze(int velocidad,int x, int y, int v) {
 		super(velocidad,x,y,v);
-		this.image[0] = new ImageIcon(this.getClass().getResource("/sprites/Kamikaze_noral.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/sprites/Kamikaze_abajo.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/sprites/Kamikaze_izquierda.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/sprites/Kamikaze_derecha.png"));
+		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_izquierda_sa.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_derecha_sa.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_izquierda_sa.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_derecha_sa.png"));
 
 }
 

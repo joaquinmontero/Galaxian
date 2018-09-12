@@ -32,15 +32,15 @@ public abstract class Mapa {
 	 	grafico = new JLabel(new ImageIcon(this.getClass().getResource("/img/Fondo_nivel_1.png")));
 		grafico.setBounds(0, 0, w, h);
 		
-		//gui.add(grafico); esta parte esta comentada porque el grafico aparece adelante, hay que corregirlo
+		gui.setContentPane(grafico);
 	
-	//Inicia la cantidad de filas que aparecerán de enemigos, varia segun el nivel 
+	//Inicia la cantidad de filas que aparecerï¿½n de enemigos, varia segun el nivel 
 	 	this.filas=filas;
-	//Crea y añade el jugador a la GUI abajo del todo en el centro  	
-	 	jugador = new Jugador(100, 510, 840, 100);
+	//Crea y aï¿½ade el jugador a la GUI abajo del todo en el centro  	
+	 	jugador = new Jugador(100, 300, 450, 100);
 		gui.add(jugador.getGrafico());
 		
-    //Añade enemigos al mapa de manera random, siempre habrá diez enemigos por fila
+    //Aï¿½ade enemigos al mapa de manera random, siempre habrï¿½ diez enemigos por fila
 	//La cantidad de filas cambia en base al nivel
 		int posicionVertical=0;
         int posicionHorizontal=0;
