@@ -4,6 +4,8 @@ package Enemigo;
 
 import Logica.*;
 import Premio.*;
+import Disparo.Disparo;
+import Disparo.DisparoJugador;
 import Inteligencia.*;
 
 /**
@@ -25,6 +27,7 @@ public abstract class Enemigo extends Entidad {
 		super(velocidad,x,y,v);
 		regala=false;
 	}
+	
 	
 	/**
 	 * Establece el tipo de inteligencia del enemigo

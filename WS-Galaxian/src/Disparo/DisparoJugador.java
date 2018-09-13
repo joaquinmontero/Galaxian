@@ -9,6 +9,10 @@ import Enemigo.*;
  * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
  *
  */
+
+	
+	
+
 public class DisparoJugador extends Disparo {
 	/**
 	 * Inicializa DisparoJugador con su respectiva velocidad, posicion X, posicion Y y puntos de vida
@@ -42,3 +46,4 @@ public class DisparoJugador extends Disparo {
 	
 
 }
+

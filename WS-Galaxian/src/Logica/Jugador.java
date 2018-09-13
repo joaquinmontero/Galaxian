@@ -39,6 +39,7 @@ public class Jugador extends Entidad {
 	}
 	
 	
+	
 	public void mover(int dir){	
 	//El metodo esta modificado para que el jugador dispare con la flecha de arriba
 	//y para que solo pueda moverse hacia los costados

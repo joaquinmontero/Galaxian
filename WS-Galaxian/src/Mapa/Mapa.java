@@ -36,16 +36,42 @@ public abstract class Mapa {
 	
 	//Inicia la cantidad de filas que aparecer�n de enemigos, varia segun el nivel 
 	 	this.filas=filas;
-	//Crea y a�ade el jugador a la GUI abajo del todo en el centro  	
+	//Crea y aniade el jugador a la GUI abajo del todo en el centro  	
 	 	jugador = new Jugador(100, 300, 450, 100);
 		gui.add(jugador.getGrafico());
-		
-    //A�ade enemigos al mapa de manera random, siempre habr� diez enemigos por fila
-	//La cantidad de filas cambia en base al nivel
+	
+	//Aniade dos enemigos de cada clase en la primer fila
+		Enemigo e;
 		int posicionVertical=0;
-        int posicionHorizontal=0;
-        Enemigo e;
-        for (int i = 0; i < filas; ++i) {
+		int posicionHorizontal=0;
+		for(int i=0;i<2;i++){
+			e=new Bobo(20,posicionHorizontal,posicionVertical,100);
+			posicionHorizontal += distHorizontal;
+			enemigos.add(e);      
+			gui.add(e.getGrafico());
+			e=new Bomba(40,posicionHorizontal,posicionVertical,100);
+			posicionHorizontal += distHorizontal;
+			enemigos.add(e);      
+			gui.add(e.getGrafico());
+			e=new Kamikaze(40,posicionHorizontal,posicionVertical,100);
+			posicionHorizontal += distHorizontal;
+			enemigos.add(e);      
+			gui.add(e.getGrafico());
+			e=new Cambiante(30,posicionHorizontal,posicionVertical,100);
+			posicionHorizontal += distHorizontal;
+			enemigos.add(e);      
+			gui.add(e.getGrafico());
+			e=new Perdedor(30,posicionHorizontal,posicionVertical,100);
+			posicionHorizontal += distHorizontal;
+			enemigos.add(e);      
+			gui.add(e.getGrafico());
+		}
+		
+	
+    //Aniade enemigos al mapa de manera random, siempre habra diez enemigos por fila
+	//La cantidad de filas cambia en base al nivel
+		posicionVertical=distVertical;
+        for (int i = 1; i < filas; ++i) {
         	posicionHorizontal=0;
             for (int j = 0; j < ENEMIGOSXFILA; j++) {
             	Random r=new Random();
