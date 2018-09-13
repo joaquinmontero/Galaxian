@@ -6,8 +6,7 @@ import javax.swing.border.EmptyBorder;
 import Logica.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
-
+import java.util.LinkedList;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -68,8 +67,16 @@ public class GUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		j = new Juego(this);
+		agregarEntidades();
 		tiempo = new ContadorTiempo(j);
 		tiempo.start();
+	}
+	
+	protected void agregarEntidades() {
+		LinkedList<Entidad> entidades=j.getMapa().entidades();
+		for(Entidad e:entidades) {
+			add(e.getGrafico());
+		}
 	}
 	
 	protected void mover(KeyEvent key){

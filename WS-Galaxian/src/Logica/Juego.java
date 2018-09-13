@@ -8,7 +8,9 @@ import GUI.*;
  *
  */
 public class Juego {
+	
 	private Mapa mapa;
+	
 	public Juego(GUI gui) {
 		mapa = new Nivel_3(gui);
 		
@@ -55,6 +57,9 @@ public class Juego {
 		mapa.jugador().mover(direccion);
 	}
 
+	public Mapa getMapa() {
+		return mapa;
+	}
 }
 
 	
