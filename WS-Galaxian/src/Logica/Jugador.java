@@ -26,18 +26,13 @@ public class Jugador extends Entidad {
         
 	}
 	
-	public void disparar(Entidad e) {
+	public Disparo disparar() {
 		Disparo disparo=new DisparoJugador(60,this.pos.x+10, this.pos.y+10,100);
-		//informa a la entidad a la que le disparo que esta siendo disparada
-		e.meDisparan(disparo);
 	}
 	
-	public void dispararSuper(Entidad e) {
+	public Disparo dispararSuper() {
 		Disparo disparo=new SuperDisparoJugador(60,this.pos.x+10, this.pos.y+10,100);
-		//informa a la entidad a la que le disparo que esta siendo disparada
-		e.meDisparan(disparo);
 	}
-	
 	
 	
 	public void mover(int dir){	

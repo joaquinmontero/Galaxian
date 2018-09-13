@@ -19,7 +19,7 @@ public abstract class Mapa {
     protected final int w=1200;
     protected final int h=1200;
 	protected Jugador jugador;
-	public LinkedList<Enemigo> enemigos;   
+	protected LinkedList<Enemigo> enemigos;   
     protected int filas;
     protected JLabel grafico;
     
@@ -120,7 +120,6 @@ public abstract class Mapa {
  	public LinkedList<Enemigo> enemigos () {
  		return enemigos;
  	}
- 	
  	
  	/**
 	 * Devuelve al jugador

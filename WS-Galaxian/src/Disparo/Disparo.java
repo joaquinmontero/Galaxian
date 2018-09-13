@@ -28,6 +28,10 @@ public abstract class Disparo extends Entidad {
 	public void atacar(Entidad e) {
 		
 	}
+	
+	public void disparar(Entidad e) {
+		e.meDisparan(this);
+	}
 
 	
 }

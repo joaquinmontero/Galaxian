@@ -14,9 +14,9 @@ import Inteligencia.*;
  *
  */
 public abstract class Enemigo extends Entidad {
-	Inteligencia i;
-	boolean regala; //me indica si el enemigos entrega un premio al morir
-	Premio premio; // premio que entregara el enemigo
+	protected Inteligencia i;
+	protected boolean regala; //me indica si el enemigos entrega un premio al morir
+	protected Premio premio; // premio que entregara el enemigo
 	
 	/**
 	 * Inicializa enemigo con su respectiva velocidad, posicion X, posicion Y y puntos de vida
