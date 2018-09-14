@@ -1,8 +1,10 @@
 package Logica;
 import Mapa.*;
 import java.awt.event.KeyEvent;
+import java.util.LinkedList;
 import java.util.Random;
 import GUI.*;
+import Disparo.*;
 /**
  * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
  *
@@ -10,9 +12,10 @@ import GUI.*;
 public class Juego {
 	
 	private Mapa mapa;
-	
-	public Juego(GUI gui) {
-		mapa = new Nivel_3(gui);
+	private LinkedList<Disparo> disparos;
+	public Juego() {
+		mapa = new Nivel_3();
+		disparos=new LinkedList<Disparo>();
 		
 	}
 	
@@ -55,10 +58,24 @@ public class Juego {
 		}
 		
 		mapa.jugador().mover(direccion);
+		
+	}
+	
+	public void moverDisparo() {
+		int i=0;
+		while(i<disparos.size()) {
+				disparos.get(i).mover(0);
+				i++;
+		}
 	}
 
 	public Mapa getMapa() {
 		return mapa;
+	}
+	
+	public void agregarDisparo(Disparo d) {
+		disparos.add(d);
+		
 	}
 }
 

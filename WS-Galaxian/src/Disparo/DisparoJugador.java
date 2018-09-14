@@ -23,6 +23,9 @@ public class DisparoJugador extends Disparo {
 
 	        super(velocidad,x,y,vida);
 	        this.image[0] = new ImageIcon(this.getClass().getResource("/img/Disparo_1.png"));
+	        this.image[1] = new ImageIcon(this.getClass().getResource("/img/Disparo_1.png"));
+	        this.image[2] = new ImageIcon(this.getClass().getResource("/img/Disparo_1.png"));
+	        this.image[3] = new ImageIcon(this.getClass().getResource("/img/Disparo_1.png"));
 	        fuerzaImpacto=10;
 	 }
 	

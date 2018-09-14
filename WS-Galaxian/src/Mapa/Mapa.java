@@ -4,6 +4,7 @@ import GUI.*;
 import Logica.*;
 import Enemigo.*;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -22,20 +23,15 @@ public abstract class Mapa {
 	protected LinkedList<Enemigo> enemigos;   
 	protected LinkedList<Entidad> entidades;
     protected int filas;
-    protected JLabel grafico;
+    protected Icon image;
     
 
 
- public Mapa(GUI gui,int filas) {
+ public Mapa(int filas) {
 	 //Inicia lista enemigos
 	 	enemigos=new LinkedList<Enemigo>();
 	 //Inicia lista entidades
 	 	entidades=new LinkedList<Entidad>();
-	//Inicia y ubica grafico del mapa en GUI
-	 	grafico = new JLabel(new ImageIcon(this.getClass().getResource("/img/Fondo_nivel_1.png")));
-		grafico.setBounds(0, 0, w, h);
-		
-		gui.setContentPane(grafico);
 	
 	//Inicia la cantidad de filas que aparecer�n de enemigos, varia segun el nivel 
 	 	this.filas=filas;
@@ -137,6 +133,12 @@ public abstract class Mapa {
  	public LinkedList<Entidad> entidades(){
  		return entidades;
  	}
+ 	
+ 	public JLabel getGrafico(){
+ 		JLabel grafico = new JLabel(image);
+		grafico.setBounds(0, 0, w, h);	
+		return grafico;
+	}
 
 	
 }

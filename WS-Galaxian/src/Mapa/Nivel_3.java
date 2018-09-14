@@ -1,6 +1,9 @@
 package Mapa;
 import Obstaculo.*;
 import Premio.*;
+
+import javax.swing.ImageIcon;
+
 import GUI.*;
 /**
  * 
@@ -14,8 +17,9 @@ import GUI.*;
 
 public class Nivel_3 extends Mapa{
 	
-	public Nivel_3(GUI gui) {
-		super(gui,3);
+	public Nivel_3() {
+		super(3);
+		image=new ImageIcon(this.getClass().getResource("/img/universo.gif"));
 		
 		/**
 		Obstaculo o=new Destruible();

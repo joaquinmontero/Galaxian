@@ -27,12 +27,12 @@ public class Jugador extends Entidad {
 	}
 	
 	public Disparo disparar() {
-		Disparo disparo=new DisparoJugador(60,this.pos.x+10, this.pos.y+10,100);
+		Disparo disparo=new DisparoJugador(100,this.pos.x+30, this.pos.y-30,100);
 		return disparo;
 	}
 	
 	public Disparo dispararSuper() {
-		Disparo disparo=new SuperDisparoJugador(60,this.pos.x+10, this.pos.y+10,100);
+		Disparo disparo=new SuperDisparoJugador(150,this.pos.x, this.pos.y-50,100);
 		return disparo;
 	}
 	

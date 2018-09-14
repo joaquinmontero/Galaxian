@@ -1,5 +1,6 @@
 package Mapa;
-import GUI.*;
+import javax.swing.ImageIcon;
+
 
 /**
  * 
@@ -12,8 +13,9 @@ import GUI.*;
  * @param GUI donde ubicara al jugador y enemigos
  */
 public class Nivel_1 extends Mapa {
-	public Nivel_1(GUI gui) {
-		super(gui,1);
+	public Nivel_1() {
+		super(1);
+		image=new ImageIcon(this.getClass().getResource("/img/Fondo_nivel_1.png"));
 	}
 	
 }

@@ -6,6 +6,9 @@ import Enemigo.*;
 
 
 import java.util.Random;
+
+import javax.swing.ImageIcon;
+
 import Mapa.*;
 /**
  * 
@@ -20,8 +23,9 @@ import Mapa.*;
 
 public class Nivel_2 extends Mapa {
 
-	public Nivel_2(GUI gui) {
-		super(gui,2);
+	public Nivel_2() {
+		super(2);
+		image=new ImageIcon(this.getClass().getResource("/img/universo.gif"));
 	/**	
 		Obstaculo o=new Destruible();
 		o=new Destruible(0,gui.getWidth()/2,66,100);
