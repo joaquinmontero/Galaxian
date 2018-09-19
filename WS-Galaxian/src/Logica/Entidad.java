@@ -114,6 +114,7 @@ public abstract class Entidad {
 		d.atacar(this);
 	}
 	
+	
 
 }
 

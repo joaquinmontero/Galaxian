@@ -8,17 +8,26 @@ import Logica.*;
 public class ContadorTiempo extends Thread {
 
 	private Juego elJuego;
+	private int fps;
 
-	ContadorTiempo(Juego j) {
+	public ContadorTiempo(Juego j,int fps) {
 		this.elJuego = j;
+		this.fps = fps;
 	}
+	
+	public void setFPS(int fps) {
+		this.fps = fps;
+	}
+	
 
 	public void run() {
+		long tiempoActual = System.nanoTime();
+		long tiempoFinal = tiempoActual + (1000000 * 1000 / fps);
 		while(true){
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			tiempoActual = System.nanoTime();
+			if(tiempoActual >= tiempoFinal) {
+				tiempoFinal = tiempoActual + (1000000 * 1000 / fps);
+				elJuego.getMapa().actualizarEntidades();
 			}
 		elJuego.mover();
 		}

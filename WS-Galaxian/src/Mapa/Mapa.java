@@ -139,6 +139,11 @@ public abstract class Mapa {
 		grafico.setBounds(0, 0, w, h);	
 		return grafico;
 	}
-
 	
+ 	public void actualizarEntidades() {
+ 		for(Entidad e : entidades) {
+ 			e.getGrafico().repaint();
+ 		}
+ 			
+ 	}
 }

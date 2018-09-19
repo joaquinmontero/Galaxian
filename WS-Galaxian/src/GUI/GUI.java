@@ -9,7 +9,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -32,6 +31,7 @@ public class GUI extends JFrame {
 	private Juego j;
 	private ContadorTiempo tiempo;
 	private TiempoDisparo tiempoDisparo;
+	
 
 	/**
 	 * Launch the application.
@@ -72,12 +72,12 @@ public class GUI extends JFrame {
 		setContentPane(j.getMapa().getGrafico());
 		agregarEntidades();
 		
-		
-		
-		tiempo = new ContadorTiempo(j);
+		tiempo = new ContadorTiempo(j,120);
 		tiempo.start();
-		tiempoDisparo= new TiempoDisparo(j);
+		tiempoDisparo= new TiempoDisparo(j,120);
 		tiempoDisparo.start();
+		
+		
 	}
 	
 	protected void agregarEntidades() {
@@ -97,7 +97,6 @@ public class GUI extends JFrame {
 			add(d.getGrafico());
 			j.agregarDisparo(d);
 		}
-		
 		this.repaint();
 	}
 }

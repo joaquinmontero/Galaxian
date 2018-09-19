@@ -13,10 +13,10 @@ public class Juego {
 	
 	private Mapa mapa;
 	private LinkedList<Disparo> disparos;
+	
 	public Juego() {
 		mapa = new Nivel_3();
 		disparos=new LinkedList<Disparo>();
-		
 	}
 	
 	/**
@@ -75,8 +75,9 @@ public class Juego {
 	
 	public void agregarDisparo(Disparo d) {
 		disparos.add(d);
-		
 	}
+	
+
 }
 
 	
