@@ -13,10 +13,10 @@ public class Juego {
 	
 	private Mapa mapa;
 	private LinkedList<Disparo> disparos;
-	
 	public Juego() {
 		mapa = new Nivel_3();
 		disparos=new LinkedList<Disparo>();
+		
 	}
 	
 	/**
@@ -25,12 +25,12 @@ public class Juego {
 	public void mover(){
 		int i=0;
 			
-			while(i<mapa.enemigos().size()) {
+		while(i<mapa.enemigos().size()) {
 			Random r = new Random();
 			
 			int dir = r.nextInt(3)+1;
 			
-			mapa.enemigos().get(i).mover(dir);
+			mapa.enemigos().get(i).moverme(dir);
 			i++;
 		}
 	}
@@ -57,14 +57,14 @@ public class Juego {
 				break;
 		}
 		
-		mapa.jugador().mover(direccion);
+		mapa.jugador().moverme(direccion);
 		
 	}
 	
-	public void moverDisparo() {
+	public void moverDisparos() {
 		int i=0;
 		while(i<disparos.size()) {
-				disparos.get(i).mover(0);
+				disparos.get(i).moverme(0);
 				i++;
 		}
 	}
@@ -75,9 +75,9 @@ public class Juego {
 	
 	public void agregarDisparo(Disparo d) {
 		disparos.add(d);
+		
 	}
 	
-
 }
 
 	

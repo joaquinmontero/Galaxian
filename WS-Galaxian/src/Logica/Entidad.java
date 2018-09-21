@@ -78,7 +78,7 @@ public abstract class Entidad {
 		}
 	}
 	
-	public void mover(int dir){	
+	public void moverme(int dir){	
 		switch (dir) {
 			case 0 : //Arriba
 				pos.setLocation(pos.x, pos.y - velocidad);
@@ -113,7 +113,6 @@ public abstract class Entidad {
 	public void meDisparan(Disparo d) {
 		d.atacar(this);
 	}
-	
 	
 
 }

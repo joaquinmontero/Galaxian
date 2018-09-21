@@ -1,30 +1,28 @@
-package GUI;
 
-	import Logica.Juego;
+
+	package GUI;
+	/**
+	 * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
+	 */
+
+	import Logica.*;
 
 	public class TiempoDisparo extends Thread {
+
 		private Juego elJuego;
-		private int fps;
-		
-		public TiempoDisparo(Juego j,int fps) {
+
+		TiempoDisparo(Juego j) {
 			this.elJuego = j;
-			this.fps = fps;
-		}
-		
-		public void setFPS(int fps) {
-			this.fps = fps;
 		}
 
 		public void run() {
-			long tiempoActual = System.nanoTime();
-			long tiempoFinal = tiempoActual + (10000000 * 1000 / fps);
 			while(true){
-				tiempoActual = System.nanoTime();
-				if(tiempoActual >= tiempoFinal) {
-					tiempoFinal = tiempoActual + (1000000 * 1000 / fps);
-					elJuego.getMapa().actualizarEntidades();
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
-			elJuego.moverDisparo();
+			elJuego.moverDisparos();
 			}
 		}
 	}

@@ -37,7 +37,7 @@ public class Jugador extends Entidad {
 	}
 	
 	
-	public void mover(int dir){	
+	public void moverme(int dir){	
 	//El metodo esta modificado para que el jugador dispare con la flecha de arriba
 	//y para que solo pueda moverse hacia los costados
 		switch (dir) {
@@ -48,12 +48,14 @@ public class Jugador extends Entidad {
 				cambiarGrafico(1);
 				break;
 			case 2 : //Izquierda
+				if(pos.x>0) {
 				pos.setLocation(pos.x - velocidad, pos.y);
-				cambiarGrafico(dir);
+				cambiarGrafico(dir);}
 				break;
 			case 3 : //Derecha
+				if(pos.x<600) {
 				pos.setLocation(pos.x + velocidad, pos.y);
-				cambiarGrafico(dir);
+				cambiarGrafico(dir);}
 				break;
 		}
 	}

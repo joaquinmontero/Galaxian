@@ -14,7 +14,7 @@ import javax.swing.JLabel;
  *
  */
 public abstract class Mapa {
-	protected final int ENEMIGOSXFILA=10;
+	protected final int ENEMIGOSXFILA=6;
     protected final int distHorizontal=120;
     protected final int distVertical=120;
     protected final int w=1200;
@@ -44,28 +44,31 @@ public abstract class Mapa {
 		Enemigo e;
 		int posicionVertical=0;
 		int posicionHorizontal=0;
-		for(int i=0;i<2;i++){
-			e=new Bobo(20,posicionHorizontal,posicionVertical,100);
-			posicionHorizontal += distHorizontal;
-			enemigos.add(e);      
-			entidades.add(e);
-			e=new Bomba(40,posicionHorizontal,posicionVertical,100);
-			posicionHorizontal += distHorizontal;
-			enemigos.add(e);      
-			entidades.add(e);
-			e=new Kamikaze(40,posicionHorizontal,posicionVertical,100);
-			posicionHorizontal += distHorizontal;
-			enemigos.add(e);      
-			entidades.add(e);
-			e=new Cambiante(30,posicionHorizontal,posicionVertical,100);
-			posicionHorizontal += distHorizontal;
-			enemigos.add(e);      
-			entidades.add(e);
-			e=new Perdedor(30,posicionHorizontal,posicionVertical,100);
-			posicionHorizontal += distHorizontal;
-			enemigos.add(e);      
-			entidades.add(e);
-		}
+		e=new Bobo(20,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		e=new Bomba(40,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		e=new Kamikaze(40,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		e=new Cambiante(30,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		e=new Perdedor(30,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		e=new Cambiante(30,posicionHorizontal,posicionVertical,100);
+		posicionHorizontal += distHorizontal;
+		enemigos.add(e);      
+		entidades.add(e);
+		
 		
 	
     //Aniade enemigos al mapa de manera random, siempre habra diez enemigos por fila
@@ -83,22 +86,22 @@ public abstract class Mapa {
             		entidades.add(e);}
             	else {
             		if((n%5)==1 ) {
-            			e=new Kamikaze(40,posicionHorizontal,posicionVertical,100);
+            			e=new Kamikaze(10,posicionHorizontal,posicionVertical,100);
             			enemigos.add(e);     
             			entidades.add(e);}
             		else {
             			if((n%5)==2 ) {
-            				e=new Bomba(40,posicionHorizontal,posicionVertical,100);
+            				e=new Bomba(10,posicionHorizontal,posicionVertical,100);
             				enemigos.add(e);      
             				entidades.add(e);}
             			else {
             				if((n%5)==3 ) {
-            					e=new Cambiante(30,posicionHorizontal,posicionVertical,100);
+            					e=new Cambiante(10,posicionHorizontal,posicionVertical,100);
             					enemigos.add(e);      
             					entidades.add(e);}
             				else {
            					if((n%5)==4 ) {
-            						e=new Perdedor(30,posicionHorizontal,posicionVertical,100);
+            						e=new Perdedor(10,posicionHorizontal,posicionVertical,100);
             						enemigos.add(e);                
             						entidades.add(e);
            					}
@@ -139,11 +142,6 @@ public abstract class Mapa {
 		grafico.setBounds(0, 0, w, h);	
 		return grafico;
 	}
+
 	
- 	public void actualizarEntidades() {
- 		for(Entidad e : entidades) {
- 			e.getGrafico().repaint();
- 		}
- 			
- 	}
 }

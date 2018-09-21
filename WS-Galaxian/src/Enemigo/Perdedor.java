@@ -15,9 +15,9 @@ import javax.swing.ImageIcon;
 public class Perdedor extends Enemigo {
 	public Perdedor(int velocidad,int x, int y, int v) {
 		super(velocidad,x,y,v);
-		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
+		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
 }
 }

@@ -15,10 +15,10 @@ import javax.swing.ImageIcon;
 public class Kamikaze extends Enemigo{
 	public Kamikaze(int velocidad,int x, int y, int v) {
 		super(velocidad,x,y,v);
-		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_izquierda_sa.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_derecha_sa.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_izquierda_sa.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Enemigo_2_derecha_sa.png"));
+		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Kamikaze.png"));
 
 }
 

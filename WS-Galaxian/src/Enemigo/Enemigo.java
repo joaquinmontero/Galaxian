@@ -61,5 +61,45 @@ public abstract class Enemigo extends Entidad {
 		if(regala==true)
 			premio=p;
 	}
+	
+	public void moverme(int dir){	
+		switch (dir) {
+			case 0 : //Arriba			
+				break;
+			case 1 : //Abajo
+				cambiarGrafico(dir);
+				pos.setLocation(pos.x, pos.y + velocidad);
+				pos.setLocation(pos.x, pos.y + 1);
+				pos.setLocation(pos.x, pos.y + 1);
+				pos.setLocation(pos.x, pos.y + 1);
+				pos.setLocation(pos.x, pos.y + 1);	
+				if(pos.getY()>500) {
+					pos.setLocation(pos.x, 0);
+				}
+				break;
+			case 2 : //Izquierda
+				if(pos.getX()>0) {
+					cambiarGrafico(dir);
+					pos.setLocation(pos.x - velocidad, pos.y);
+					pos.setLocation(pos.x - 1, pos.y);
+					pos.setLocation(pos.x - 1, pos.y);
+					pos.setLocation(pos.x - 1, pos.y);
+					pos.setLocation(pos.x - 1, pos.y);
+				}
+				break;
+			case 3 : //Derecha
+				if(pos.getX()<600) {
+					cambiarGrafico(dir);
+					pos.setLocation(pos.x + velocidad, pos.y);
+					pos.setLocation(pos.x + 1, pos.y);
+					pos.setLocation(pos.x + 1, pos.y);
+					pos.setLocation(pos.x + 1, pos.y);
+					pos.setLocation(pos.x + 1, pos.y);
+					
+				}
+				break;
+		}
+		
+	}
 
 }

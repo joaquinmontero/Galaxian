@@ -15,10 +15,10 @@ import javax.swing.ImageIcon;
 public class Bobo extends Enemigo {
 	public Bobo(int velocidad,int x, int y, int v) {
 		super(velocidad,x,y,v);
-		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Bobo.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Bobo.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Bobo.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Bobo.png"));
+		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Bobo_derecha.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Bobo_izquierda.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Bobo_izquierda.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Bobo_derecha.png"));
 
 	}
 }

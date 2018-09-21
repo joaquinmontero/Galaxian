@@ -15,9 +15,9 @@ import javax.swing.ImageIcon;
 public class Bomba extends Enemigo{
 	public Bomba(int velocidad,int x, int y, int v) {
 		super(velocidad,x,y,v);
-		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
-		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Con_disparo.png"));
+		this.image[0] = new ImageIcon(this.getClass().getResource("/img/Bomba.png"));
+		this.image[1] = new ImageIcon(this.getClass().getResource("/img/Bomba.png"));
+		this.image[2] = new ImageIcon(this.getClass().getResource("/img/Bomba.png"));
+		this.image[3] = new ImageIcon(this.getClass().getResource("/img/Bomba.png"));
 }
 }

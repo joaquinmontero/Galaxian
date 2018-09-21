@@ -9,6 +9,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -32,7 +33,6 @@ public class GUI extends JFrame {
 	private ContadorTiempo tiempo;
 	private TiempoDisparo tiempoDisparo;
 	
-
 	/**
 	 * Launch the application.
 	 */
@@ -56,7 +56,7 @@ public class GUI extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent arg0) {
-				mover(arg0);
+				escucharUsuario(arg0);
 			}
 		});
 		getContentPane().setLayout(null);
@@ -72,12 +72,12 @@ public class GUI extends JFrame {
 		setContentPane(j.getMapa().getGrafico());
 		agregarEntidades();
 		
-		tiempo = new ContadorTiempo(j,120);
+		
+		
+		tiempo = new ContadorTiempo(j);
 		tiempo.start();
-		tiempoDisparo= new TiempoDisparo(j,120);
+		tiempoDisparo=new TiempoDisparo(j);
 		tiempoDisparo.start();
-		
-		
 	}
 	
 	protected void agregarEntidades() {
@@ -87,9 +87,8 @@ public class GUI extends JFrame {
 		}
 	}
 	
-	
-	
-	protected void mover(KeyEvent key){
+		
+	protected void escucharUsuario(KeyEvent key){
 		int r=key.getKeyCode();
 		j.mover(r);
 		if(r==KeyEvent.VK_UP) {
@@ -97,6 +96,7 @@ public class GUI extends JFrame {
 			add(d.getGrafico());
 			j.agregarDisparo(d);
 		}
+		
 		this.repaint();
 	}
 }
