@@ -2,8 +2,10 @@ package Disparo;
 import javax.swing.ImageIcon;
 import Logica.*;
 
-import Enemigo.*;
+import Personaje.*;
+import Personaje.Enemigo.Enemigo;
 import Obstaculo.*;
+import Personaje.*;
 /**
  * 
  * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
@@ -12,7 +14,7 @@ import Obstaculo.*;
 public class SuperDisparoJugador extends Disparo{
 	/**
 	 * Inicializa SuperDisparoJugadaor con su respectiva velocidad, posicion X, posicion Y y puntos de vida
-	 * Añade el conjunto de imagenes al arreglo de imagenes del SuperJugador
+	 * Aï¿½ade el conjunto de imagenes al arreglo de imagenes del SuperJugador
 	 * @param v Int velocidad, x Int posicion en eje X, y Int posicion en eje Y, v Int puntos de vida
 	 */
 	public SuperDisparoJugador(int velocidad,int x, int y,int vida) {

@@ -1,4 +1,6 @@
 package Disparo;
+import java.awt.Point;
+
 import javax.swing.Icon;
 import Logica.*;
 /**
@@ -9,20 +11,17 @@ import Logica.*;
 
 
 public abstract class Disparo extends Entidad {
-	
 	int fuerzaImpacto;
-	
-	/**
-	 * Inicializa disparo con su respectiva velocidad, posicion X, posicion Y y puntos de vida
-	 * @param v Int velocidad, x Int posicion en eje X, y Int posicion en eje Y, v Int puntos de vida
-	 */
-	public Disparo(int velocidad, int x, int y,int vida) {
 
-        super(velocidad,x,y,vida);
+	public Disparo(Point pos) {
+        super(pos);
+        this.vida = 1;
+        this.puntaje = 0;
+        
     }
 
 	/**
-	 * Se encarga de alterar a la Entidad que está atacando dependiendo del tipo que sea
+	 * Se encarga de alterar a la Entidad que estï¿½ atacando dependiendo del tipo que sea
 	 * @param e Entidad a atacar
 	 */
 	public void atacar(Entidad e) {

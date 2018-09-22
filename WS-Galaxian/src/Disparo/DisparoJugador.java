@@ -3,7 +3,8 @@ import javax.swing.ImageIcon;
 
 import Logica.*;
 import Obstaculo.*;
-import Enemigo.*;
+import Personaje.*;
+import Personaje.Enemigo.Enemigo;
 /**
  * 
  * @author Araceli Iglesias, Sol Stiep, Yasmin Pie Lopez
@@ -16,7 +17,7 @@ import Enemigo.*;
 public class DisparoJugador extends Disparo {
 	/**
 	 * Inicializa DisparoJugador con su respectiva velocidad, posicion X, posicion Y y puntos de vida
-	 * Añade el conjunto de imagenes al arreglo de imagenes del DisparoJugador
+	 * Aï¿½ade el conjunto de imagenes al arreglo de imagenes del DisparoJugador
 	 * @param v Int velocidad, x Int posicion en eje X, y Int posicion en eje Y, v Int puntos de vida
 	 */
 	public DisparoJugador(int velocidad,int x, int y,int vida) {
